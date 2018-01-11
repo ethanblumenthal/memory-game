@@ -8,14 +8,15 @@ const Card = (props) => {
         style.backgroundColor = props.backgroundColor;
     }
     return (
-        <div className="card-container" style={style} >
+        <div onClick={props.onClick} className="card-container" style={style} >
         </div>
     );
 };
 
 Card.propTypes = {
     showing: PropTypes.bool.isRequired,
-    backgroundColor: PropTypes.string.isRequired
+    backgroundColor: PropTypes.string.isRequired,
+    onClick: PropTypes.func.isRequired
 };
 
 export default Card;
