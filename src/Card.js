@@ -3,11 +3,19 @@ import PropTypes from 'prop-types';
 import './Card.css';
 
 const Card = (props) => {
+    let style = {};
+    if (props.showing) {
+        style.backgroundColor = props.backgroundColor;
+    }
     return (
-        <div />
+        <div className="card-container" style={style} >
+        </div>
     );
 };
 
-Card.PropTypes = {};
+Card.propTypes = {
+    showing: PropTypes.bool.isRequired,
+    backgroundColor: PropTypes.string.isRequired
+};
 
 export default Card;

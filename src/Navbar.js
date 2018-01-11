@@ -11,6 +11,6 @@ const Navbar = (props) => {
     </header>
 };
 
-Navbar.PropTypes = {};
+Navbar.propTypes = {};
 
 export default Navbar;

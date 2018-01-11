@@ -38,18 +38,17 @@ export default class MemoryGame extends Component {
     ];
     cards = shuffle(cards);
     this.state = {cards, noClcik: false};
+  }
+  render() {
+    const cards = this.state.cards.map(() => (
+      <Card key="card.id" />
+    ));
 
-    render() {
-      cons cards = this.state.cards.map(() => (
-        <Card key="card.id" />
-      ));
-
-      return (
-        <div>
-          <Navbar />
-          {cards}
-        </div>
-      );
-    }
+    return (
+      <div>
+        <Navbar />
+        {cards}
+      </div>
+    );
   }
 }
