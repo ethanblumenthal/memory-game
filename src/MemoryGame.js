@@ -37,11 +37,11 @@ export default class MemoryGame extends Component {
       {id: 15, cardState: CardState.HIDING, backgroundColor: 'lightskyblue'}
     ];
     cards = shuffle(cards);
-    this.state = {cards, noClcik: false};
+    this.state = {cards, noClick: false};
   }
   render() {
-    const cards = this.state.cards.map(() => (
-      <Card key="card.id" />
+    const cards = this.state.cards.map((card) => (
+      <Card key={card.id} />
     ));
 
     return (
